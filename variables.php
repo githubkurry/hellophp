@@ -27,8 +27,18 @@ test2();
 echo "<br>";
 
 function test3(){
-    $GLOBALS['z']=$GLOBALS['y']/$GLOBALS['x'];
+    $GLOBALS['z']=$GLOBALS['y']/$GLOBALS['x'];//GLOBALS数组储存全局变量
 }
 test3();
 echo $z;
+echo "<br>";
+
+function test4(){
+    static $a=6;//static声明变量，函数完成后不会被删除
+    echo $a." ";
+    $a++;
+}
+test4();
+test4();
+test4();
 ?>
