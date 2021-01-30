@@ -6,15 +6,17 @@ $txt="hello";
 echo $z;
 echo $txt;
 echo "<br>";
-echo $a;
-echo "<br>";
 
 function test(){
     $a=6;//局部变量
     echo $a;
+    echo "<br>";
     echo $x;
 }
 test();
+echo "<br>";
+
+echo $a;
 echo "<br>";
 
 function test2(){
@@ -22,4 +24,11 @@ function test2(){
     echo $x;
 }
 test2();
+echo "<br>";
+
+function test3(){
+    $GLOBALS['z']=$GLOBALS['y']/$GLOBALS['x'];
+}
+test3();
+echo $z;
 ?>
