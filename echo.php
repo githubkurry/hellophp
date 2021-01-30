@@ -8,4 +8,13 @@ echo "私一番好きなバーガーは {$hamburg[1]} です",",","{$hamburg[3]}
 echo "<br>";
 print "今日はバイトの一日、$txt1 はとても $txt2 です。";
 print "私一番好きなバーガーは {$hamburg[1]} です";
+echo "<br>";
+
+
+//EOF　定义字符串
+echo <<<EOF
+      $txt1 有意思
+      haha
+EOF;
+
 ?>
