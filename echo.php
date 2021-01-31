@@ -61,10 +61,22 @@ if($txt3 === $txt4){
 }else{
     echo "类型不相等";
 }
+echo "<br>";
+var_dump($txt3 == $txt4);
+var_dump($txt3 === $txt4);
+var_dump($txt3 != $txt4);
+var_dump($txt3 !== $txt4);
+var_dump($txt3 <> $txt4);
+echo "<br>";
 
 //运算符号
 $x=5;
 $y=50;
-echo ($x - $y)." ".($x * $y)." ".($x + $y)." ".($x / $y)." ".($y % $x);
+echo ($x - $y)." ".($x * $y)." ".($x + $y)." ".($x / $y)." ".($y % $x)." ".(intdiv(10,3));//加减乘除取余整除
 echo $txt1.=$txt2;
+echo "<br>";
+echo ++$x." ".$x++." ".--$y." ".$y--;
+echo "<br>";
+echo $x." ".$y;
+
 ?>
