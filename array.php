@@ -55,4 +55,8 @@ echo "<br>";
 krsort($age);
 print_r($age);
 echo "<br>";
+
+//superglobals里的5.$_POST
+echo "become " . $_GET['subject'] . " @ " . $_GET['web'];
+
 ?>
