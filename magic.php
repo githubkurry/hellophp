@@ -1,4 +1,9 @@
 <?php
+namespace MyProject;
+//__NAMESPACE__
+echo 'spacename:'.__NAMESPACE__.'<br>';
+
+
 //__LINE__
 echo "row".__LINE__;
 echo "<br>";
@@ -29,7 +34,13 @@ $t = new cname();
 $t->fname();
 
 //__METHOD__
+function mname(){
+    echo "method:".__METHOD__.'<br>';
+}
+mname();
 
 
 //__NAMESPACE__
+
+echo 'spacename:'.__NAMESPACE__.'<br>';
 ?>
