@@ -20,7 +20,7 @@ echo "<br>";
 
 
 //define常量
-define("uki","got a job",false);//(name,value,case insensitive）
+define("uki","got a job",true);//(name,value,case insensitive）
 echo uki;
 echo "<br>";
 function test5(){//全局变量
