@@ -23,7 +23,7 @@
                 $emailErr = "email is needed";
             }else{
                 $email = test_input($_POST["email"]);
-                if(!preg_match("/(/([\w\-]+\@[\w-]+\.[\w\-]+)/",$email)){
+                if(!preg_match("/([\w\-]+\@[\w-]+\.[\w\-]+)/",$email)){
                     $emailErr = "email is not legitimate ";
                 }
             }
