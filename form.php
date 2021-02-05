@@ -1,5 +1,7 @@
 <?php
 //下拉菜单单选
+//$_GET用于收集method="get"表单中的值，对任何人都可见，发送的信息量有限制
+//$_POST用于收集method="post"表单中的值，对任何人都不可见，发送的信息量无限制
 $q = isset($_GET['q'])?htmlspecialchars($_GET['q']):'';
 if($q){
     if($q =='google'){
