@@ -5,10 +5,7 @@
 </head>
 <body>
     <div class="array">
-        <?php include 'multiarray.php'; ?>
-        <?php require 'multiarray.php';
-            echo $idol['bp'][0]."<br>";
-        ?>
+        <?php include 'include.php'; ?>
     </div>
     <h1>欢迎光临!</h1>
     
