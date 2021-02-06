@@ -11,4 +11,10 @@
     }else{
         echo "普通访客";
     }
+    setcookie("user", "", time()-3600);
+    if (isset($_COOKIE["user"])){
+        echo "哈哈".$_COOKIE["user"];
+    }else{
+        echo "普通访客";
+    }
 ?>
