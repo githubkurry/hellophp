@@ -138,6 +138,8 @@ if($conn->connect_error){
         mysqli_stmt_execute($stmt);
     }
 }
+
+//读取数据
 $sql = "SELECT id, firstname, lastname FROM MyGuests";
 $result = $conn->query($sql);
 if($result->num_rows > 0){
@@ -149,10 +151,51 @@ if($result->num_rows > 0){
 }
 $conn->close();
 
-$result = mysqli_query($con,"SELECT * FROM Persons WHERE FirstName = 'Peter'");
+
+//where
+$con = mysqli_connect("localhost","username","password","dbname");
+if(mysqli_connect_errno()){
+    echo "failed".mysqli_connect_errno();
+}
+$result = mysqli_query($con,"SELECT * FROM db4 WHERE FirstName = 'john'");
 while($row = mysqli_fetch_array($result)){
     echo $row['FirstName']." ".$row['LastName'];
     echo "<br>";
 }
 
+//order by
+$con = mysqli_connect("localhost","username","password","dbname");
+if(mysqli_connect_errno()){
+    echo "failed".mysqli_connect_errno();
+}
+$result = mysqli_query($con,"SELECT * FROM db4 ORDER BY firstname");
+while($row = mysqli_fetch_array($result)){
+    echo $row['firstname'];
+    echo " ".$row['lastname'];
+    echo " ".$row['email'];
+    echo "<br>";
+}
+mysqli_close($con);
+
+//2 order by
+//SELECT * FROM db4 ORDER BY firstname,lastname;
+
+
+//update
+$con = mysqli_connect("localhost","username","password","dbname");
+if(mysqli_connect_errno()){
+    echo "failed".mysqli_connect_errno();
+}
+mysqli_query($con,"UPDATE db4 SET email='john123@gmail.com' WHERE firstname='john' AND lastname='doe'");
+mysqli_close($con);
+
+
+
+//delete
+$con = mysqli_connect($localhost,$username,$password,$dbname);
+if(mysqli_connect_errno()){
+    echo "failed".mysqli_connect_errno();
+}
+mysqli_query($con,"DELETE FROM db4 WHERE first='john'");
+mysqli_close($con);
 ?>
