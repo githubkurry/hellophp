@@ -1,0 +1,15 @@
+1.无法访问localhost/phpmyadmin，出现错误为：not found  The requested URL was not found on this server.
+  解决方法：服务器名错误，访问localhost:8080/phpmyadmin可以访问成功。
+
+2.连接phpmyadmin出现错误
+  mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES)
+  phpMyAdmin tried to connect to the MySQL server, and the server rejected the connection. You should check the host, username and password in your configuration and make sure that they correspond to the information given by the administrator of the MySQL server.
+  解决方法：从xampp里打开terminal，输入cd ../opt/lampp/phpmyadmin然后nano config.inc.php。
+  $cfg['Servers'][$i]['auth_type'] = 'config'；里的config改成cookie；
+  保存nano用control加o；退出用control加x；
+
+
+3.新电脑访问localhost/phpmyadmin出现错误
+  1.端口被占用：但是xampp里的network里的localhost:8080->80正常启动了，所以端口没被占用。
+  2.确认是否开启了防火墙。
+  3.服务器名没输对，可以试试localhost:8080/phpmyadmin是否有效。
