@@ -8,6 +8,10 @@
   $cfg['Servers'][$i]['auth_type'] = 'config'；里的config改成cookie；
   保存nano用control加o；退出用control加x；
 
+3.8080端口可能被自动开启的apache占据，要用 
+  lsof -i tcp:8080 查询是否有占用
+  然后kill -9 pid杀死进程
+
 
 3.新电脑访问localhost/phpmyadmin出现错误
   1.端口被占用：但是xampp里的network里的localhost:8080->80正常启动了，所以端口没被占用。
